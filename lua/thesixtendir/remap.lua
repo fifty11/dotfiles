@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap("n", "<leader>mk", ":!make all<CR>", default_opts)
 keymap("n", "<leader>mc", ":!make clean<CR>", default_opts)
 keymap("n", "<leader>mt", ":!make test<CR>", default_opts)
-
+keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts)
+--vim.cmd.cd("%:p:h")
 --vim.cmd("nm <leader>mk !make")
 --vim.cmd("nm <leader>mc !make clean")

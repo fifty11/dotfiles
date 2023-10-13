@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "cmdick",
-        "randcol"
+        "randcol",
+        "chdir"
     ]
 }
