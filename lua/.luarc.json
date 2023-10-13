@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
         "vim",
-        "cmdick"
+        "cmdick",
+        "randcol"
     ]
 }

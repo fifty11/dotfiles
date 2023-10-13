@@ -33,5 +33,6 @@ return require('packer').startup(function(use)
 		}
 }
 	use 'morhetz/gruvbox'
+	use 'folke/tokyonight.nvim'
 	use 'LunarVim/darkplus.nvim'
   end)

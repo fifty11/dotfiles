@@ -1,5 +1,6 @@
-obs!
 you must have:
 packer
 lua-language-server
 clangd
+
+obs! if you have a transparent terminal background the windows/wallpaper you have on your terminal should be transparent or the text will be hard to see
