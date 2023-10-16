@@ -3,6 +3,7 @@
         "vim",
         "cmdick",
         "randcol",
-        "chdir"
+        "chdir",
+        "far"
     ]
 }
