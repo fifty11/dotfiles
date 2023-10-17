@@ -1,23 +1,21 @@
-local e
-
 local input
 function GitAdd()
-	e = vim.fn.input("add files(default: \".\"): ")
+	input = vim.fn.input("git add: ")
 
-	if e=="" then
-		e="*"
+	if input == "" then
+		input = "*"
 	end
-	vim.cmd("!git add " .. e)
+	vim.cmd("!git add " .. input)
 end
 function GitCommit()
-	e = vim.fn.input("commit option(default: \".\"): ")
+	input = vim.fn.input("git commit -am: ")
 
-	if e=="" then
-		e="commit"
+	if input == "" then
+		input = "commit"
 	end
-	vim.cmd("!git commit -am \"" .. e .. "\"")
+	vim.cmd("!git commit -am \"" .. input .. "\"")
 end
 function GitPush()
-	e = vim.fn.input("push(default: \"origin main\"): ")
-	vim.cmd("!git push " .. e)
+	input = vim.fn.input ("git push: ")
+	vim.cmd("!git push " .. input)
 end
