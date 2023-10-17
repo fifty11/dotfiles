@@ -35,5 +35,3 @@ function randcol ()
 	end
 	cmdick(colorSchemeRandomized)
 end
-
-
