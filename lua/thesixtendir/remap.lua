@@ -9,12 +9,12 @@ keymap("n", "<leader>a", ":lua vim.lsp.buf.code_action()<CR>", default_opts)
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 
-vim.cmd("imap <C-s> <ESC>:w<CR>a")
+keymap("i", "<C-s>", "<ESC>:w<CR>a", default_opts)
 
 
-keymap("n", "<leader>mk", ":lua make()", default_opts)
+keymap("n", "<leader>mk", ":lua Make()<CR>", default_opts)
 
-keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts)
+keymap("n", "<leader>cd", vim.cmd.cd(\"%:p:h\"), default_opts)
 
 
 keymap("n", "<C-h>", ":lua far()<CR>", default_opts)--find and replace
