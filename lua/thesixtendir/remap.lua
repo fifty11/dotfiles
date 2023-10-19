@@ -10,11 +10,13 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 
 keymap("i", "<C-s>", "<ESC>:w<CR>a", default_opts)
-
+keymap("n", "<C-s>", "<ESC>:w<CR>", default_opts)
+keymap("i", "<C-Q>", "<ESC>:q<CR>a", default_opts)
+keymap("n", "<C-Q>", "<ESC>:q<CR>", default_opts)
 
 keymap("n", "<leader>mk", ":lua Make()<CR>", default_opts)
 
-keymap("n", "<leader>cd", vim.cmd.cd(\"%:p:h\"), default_opts)
+keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts)
 
 
 keymap("n", "<C-h>", ":lua far()<CR>", default_opts)--find and replace
