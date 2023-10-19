@@ -8,6 +8,8 @@ keymap("n", "<leader>a", ":lua vim.lsp.buf.code_action()<CR>", default_opts)
 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
+keymap("i", "<F12>", "<ESC><leader>gdwhi", default_opts)
+
 
 keymap("i", "<C-s>", "<ESC>:w<CR>a", default_opts)
 keymap("n", "<C-s>", "<ESC>:w<CR>", default_opts)
