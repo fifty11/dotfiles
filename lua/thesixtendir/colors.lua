@@ -1,4 +1,4 @@
-function cmdick(colorschemeChoise)
+function Cmdick(colorschemeChoise)
 	if colorschemeChoise~=nil then
 		vim.cmd("colorscheme " .. colorschemeChoise)
 		vim.print(colorschemeChoise)
@@ -9,7 +9,7 @@ function cmdick(colorschemeChoise)
 	vim.cmd("highlight NonText ctermbg=none")
 
 end
-function randcol ()
+function Randcol ()
 	math.randomseed(os.time())
 
 	local i = math.random(5)
@@ -35,5 +35,5 @@ function randcol ()
 			colorSchemeRandomized="tokyonight-night"
 		end
 	end
-	cmdick(colorSchemeRandomized)
+	Cmdick(colorSchemeRandomized)
 end
