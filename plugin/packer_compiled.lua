@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
     url = "https://github.com/LunarVim/darkplus.nvim"
   },
+  flexoki = {
+    loaded = true,
+    path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flexoki",
+    url = "https://github.com/stevedylandev/flexoki-nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox",

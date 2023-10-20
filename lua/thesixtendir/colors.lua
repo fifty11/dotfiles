@@ -12,7 +12,7 @@ end
 function randcol ()
 	math.randomseed(os.time())
 
-	local i = math.random(3)
+	local i = math.random(5)
 	local colorSchemeRandomized="default"
 
 	if i == 1 then
@@ -22,6 +22,8 @@ function randcol ()
 	elseif i==3 then
 		colorSchemeRandomized="habamax"
 	elseif i==4 then
+		colorSchemeRandomized="flexkbi"
+	elseif i==5 then
 		i=math.random(4)
 		if i==1 then
 			colorSchemeRandomized="tokyonight-storm"
