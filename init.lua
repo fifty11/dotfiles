@@ -4,7 +4,7 @@ function StartIDE()
 	require("thesixtendir")
 	vim.wo.relativenumber = true
 	vim.wo.number = true
-	SetTabspace(6)
+	SetTabspace(4)
 	Cmdick("flexoki")
 	vim.cmd("set statusline+=%F")
 end
