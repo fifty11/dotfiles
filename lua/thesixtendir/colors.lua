@@ -22,7 +22,7 @@ function Randcol ()
 	elseif i==3 then
 		colorSchemeRandomized="habamax"
 	elseif i==4 then
-		colorSchemeRandomized="flexkbi"
+		colorSchemeRandomized="flexoki"
 	elseif i==5 then
 		i=math.random(4)
 		if i==1 then
