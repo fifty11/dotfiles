@@ -3,9 +3,6 @@ local default_opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
-keymap("n", "<leader>a", ":lua vim.lsp.buf.code_action()<CR>", default_opts)
-
-
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 keymap("i", "<F12>", "<ESC><leader>gdwhi", default_opts)
