@@ -11,7 +11,7 @@ function GitCommit()
 	input = vim.fn.input("git commit -am: ")
 
 	if input == "" then
-		input = "gang gang, gang gang, icecream so good"
+		input = "gang gang, gang gang, icecream so good, i am a cowboy"
 	end
 	vim.cmd("!git commit -am \"" .. input .. "\"")
 end

@@ -22,10 +22,10 @@ keymap("n", "<C-h>", ":lua far()<CR>", default_opts) --find and replace
 keymap("n", "<C-f>", "?", default_opts) --find
 
 
-keymap("n", "<leader>ga", ":lua GitAdd()<CR>", default_opts)--find and replace
-keymap("n", "<leader>gc", ":lua GitCommit()<CR>", default_opts)--find and replace
-keymap("n", "<leader>gp", ":lua GitPush()<CR>", default_opts)--find and replace
-keymap("n", "<leader>bk", ":!make clean; bear -- make", default_opts)--find and replace
+keymap("n", "<leader>ga", ":lua GitAdd()<CR>", default_opts)--git add <options>(default:"*")
+keymap("n", "<leader>gc", ":lua GitCommit()<CR>", default_opts)--git commit -am <options>(default:"gang gang, gang gang, icecream so good, i am a cowboy")
+keymap("n", "<leader>gp", ":lua GitPush()<CR>", default_opts)--git push <options>(default:"")
+keymap("n", "<leader>bk", ":!make clean; bear -- make", default_opts)--make a compile_flags.json through the Makefile
 
 
 --%s/n/e/g
