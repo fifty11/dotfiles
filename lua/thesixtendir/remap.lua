@@ -13,10 +13,16 @@ keymap("n", "<C-s>", "<ESC>:w<CR>", default_opts) --save - normalmode
 keymap("i", "<C-Q>", "<ESC>:q<CR>a", default_opts) --quit - insertmode
 keymap("n", "<C-Q>", "<ESC>:q<CR>", default_opts) --quit - normalmode
 
+
+keymap("n", "<leader>bk", ":!make clean; bear -- make", default_opts)--make a compile_flags.json through the Makefile
 keymap("n", "<leader>mk", ":lua Make()<CR>", default_opts) --make
 
-keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts) --change directory
 
+keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts) --change directory to current working file
+
+
+keymap("i", "<C-h>", ":lua far()<CR>", default_opts) --find and replace
+keymap("i", "<C-f>", "?", default_opts) --find
 
 keymap("n", "<C-h>", ":lua far()<CR>", default_opts) --find and replace
 keymap("n", "<C-f>", "?", default_opts) --find
@@ -25,7 +31,6 @@ keymap("n", "<C-f>", "?", default_opts) --find
 keymap("n", "<leader>ga", ":lua GitAdd()<CR>", default_opts)--git add <options>(default:"*")
 keymap("n", "<leader>gc", ":lua GitCommit()<CR>", default_opts)--git commit -am <options>(default:"gang gang, gang gang, icecream so good, i am a cowboy")
 keymap("n", "<leader>gp", ":lua GitPush()<CR>", default_opts)--git push <options>(default:"")
-keymap("n", "<leader>bk", ":!make clean; bear -- make", default_opts)--make a compile_flags.json through the Makefile
 
 
 --%s/n/e/g
