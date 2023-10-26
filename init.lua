@@ -1,10 +1,6 @@
-vim.cmd("colorscheme koehler")
-vim.cmd("nmap <Space>s :lua StartIDE()<CR>")
-
-
 function StartIDE()
-	vim.cmd("nmap <Space>s :lua StopIDE()<CR>")
 	require("thesixtendir")
+	vim.cmd("nmap <Space>s :lua StopIDE()<CR>")
 	vim.cmd("LspStart")
 	vim.wo.relativenumber = true
 	vim.wo.number = true
@@ -14,7 +10,9 @@ function StartIDE()
 end
 
 function StopIDE()
-	vim.cmd(":LspStop")
-	vim.cmd("colorscheme koehler")
 	vim.cmd("nmap <Space>s :lua StartIDE()<CR>")
+	vim.cmd("LspStop")
+	vim.cmd("colorscheme koehler")
 end
+vim.cmd("nmap <Space>s :lua StartIDE()<CR>")
+vim.cmd("colorscheme koehler")
