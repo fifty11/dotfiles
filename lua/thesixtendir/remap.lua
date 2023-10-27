@@ -21,10 +21,10 @@ keymap("n", "<leader>mk", ":lua Make()<CR>", default_opts) --make
 keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts) --change directory to current working file
 
 
-keymap("i", "<C-h>", ":lua far()<CR>", default_opts) --find and replace
+keymap("i", "<C-h>", ":lua Far()<CR>", default_opts) --find and replace
 keymap("i", "<C-f>", "?", default_opts) --find
 
-keymap("n", "<C-h>", ":lua far()<CR>", default_opts) --find and replace
+keymap("n", "<C-h>", ":lua Far()<CR>", default_opts) --find and replace
 keymap("n", "<C-f>", "?", default_opts) --find
 
 
@@ -35,5 +35,3 @@ keymap("n", "<leader>gp", ":lua GitPush()<CR>", default_opts)--git push <options
 
 --%s/n/e/g
 --vim.cmd.cd("%:p:h")
---vim.cmd("nm <leader>mk !make")
---vim.cmd("nm <leader>mc !make clean")

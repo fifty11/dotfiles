@@ -1,6 +1,6 @@
 --made by fifty11 (@github)
 --i dont have a licence so it is ownerless :( but free to use for all use :)
-function far()
+function Far()
 	local find = vim.fn.input("find: ")
 	if find==nil then
 		return -1

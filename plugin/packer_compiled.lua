@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["clangd-nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\clangd-nvim",
-    url = "https://github.com/robert-oleynik/clangd-nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -108,11 +103,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lua-language-server"] = {
-    loaded = true,
-    path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lua-language-server",
-    url = "https://github.com/LuaLS/lua-language-server"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -153,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["pywal.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ad54564\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\pywal.nvim",
+    url = "https://github.com/AlphaTechnolog/pywal.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
