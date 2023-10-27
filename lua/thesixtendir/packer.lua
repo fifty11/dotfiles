@@ -12,9 +12,6 @@ return require('packer').startup(function(use)
 
 
 
-	use 'robert-oleynik/clangd-nvim'
-	use 'LuaLS/lua-language-server'
-
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use {
