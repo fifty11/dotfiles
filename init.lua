@@ -1,6 +1,6 @@
 function StartIDE()
 	vim.cmd("nmap <Space>s :lua StopIDE()<CR>")
-	vim.cmd("colorscheme koehler")
+	vim.cmd("colorscheme habamax")
 
 	require("thesixtendir")
 

@@ -3,7 +3,16 @@ local default_opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
+keymap("n", "<leader>e", ":Ex<CR>", default_opts)
+
+keymap("n", "<leader>he", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", default_opts) --harpoon menu
+keymap("n", "<leader>ha", ":lua require(\"harpoon.mark\").add_file()<CR>", default_opts) --harpoon menu
+
+
+keymap("n", "<C-t>", ":NERDTreeToggle<CR>:vertical resize 23<CR>", default_opts) --toggle NERDTree --normalmode
+keymap("i", "<C-t>", "<ESC>:NERDTreeToggle<CR>:vertical resize 23<CR>", default_opts) --toggle NERDTree --normalmode
+
 
 keymap("i", "<F12>", "<ESC><leader>gdwhi", default_opts) --find defention and set cursor to after it
 
