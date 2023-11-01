@@ -30,9 +30,6 @@ keymap("n", "<leader>mk", ":!make all", default_opts) --make
 keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", default_opts) --change directory to current working file
 
 
-keymap("i", "<C-h>", ":lua Far()<CR>", default_opts) --find and replace
-keymap("i", "<C-f>", "?", default_opts) --find
-
 keymap("n", "<C-h>", ":lua Far()<CR>", default_opts) --find and replace
 keymap("n", "<C-f>", "?", default_opts) --find
 

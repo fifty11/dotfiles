@@ -4,10 +4,11 @@ function StartIDE()
 
 	require("thesixtendir")
 
+	vim.cmd("let NERDTreeShowHidden=1")
 	vim.wo.relativenumber = true
 	vim.wo.number = true
 	SetTabspace(4)
-	Cmdick("flexoki")
+	Cmdick("pywal")
 	vim.cmd("set statusline+=%F")
 end
 

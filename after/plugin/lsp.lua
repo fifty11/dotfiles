@@ -4,7 +4,10 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	'clangd',
-	'rust_analyzer',
+	"lua_ls",
+	"pyre",
+	"cmake",
+	"asm_lsp",
 })
 
 -- Fix Undefined global 'vim'

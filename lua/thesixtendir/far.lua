@@ -12,9 +12,11 @@ function Far()
 	if replace==nil then
 		replace=""
 	end
-	replace = replace:gsub("%/", "\\/")
 	replace = replace:gsub("%\\", "\\\\")
+	replace = replace:gsub("%/", "\\/")
 	--vim.print("finna: " .. find .. "\nrepy" .. replace)
 	vim.cmd("%s/" .. find .. "/" .. replace .. "/g")
 	return 0
 end
+
+
