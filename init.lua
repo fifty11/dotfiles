@@ -10,7 +10,11 @@ function StartIDE()
 	vim.wo.relativenumber = true
 	vim.wo.number = true
 	SetTabspace(4)
-	Cmdick("pywal")
+	if vim.loop.os_uname().sysname=="Linux" then
+		Cmdick("pywal")
+	else
+		Cmdick("flexoki")
+	end
 	vim.cmd("set statusline+=%F")
 end
 
