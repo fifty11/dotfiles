@@ -1,41 +1,41 @@
-local keymap = vim.keymap.set
- 
-local default_opts = { norekeymap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+local def_opts = { noremap = true, silent = true }
 local function map(str1, str2)
-	keymap("n", str1, "<cmd>" .. str2)
-	keymap("i", str1, "<cmd>" .. str2)
+	keymap("n", str1, "<cmd>" .. str2 .. "<CR>", def_opts)
+	keymap("i", str1, "<cmd>" .. str2 .. "<CR>", def_opts)
 end
-vim.g.keymapleader = " "
 
 
---keymap("n", "<leader>e", "<CMD>Ex")
+vim.g.mapleader = " "
 
-keymap("n", "<leader>he", "<CMD>lua require(\"harpoon.ui\").toggle_quick_menu()") --harpoon menu
-keymap("n", "<leader>ha", "<CMD>lua require(\"harpoon.mark\").add_file()") --harpoon menu
+keymap("n", "<leader>e", ":Ex<CR>", def_opts)
+
+keymap("n", "<leader>he", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", def_opts) --harpoon menu
+keymap("n", "<leader>ha", ":lua require(\"harpoon.mark\").add_file()<CR>", def_opts) --harpoon menu
 
 
-keymap("i", "<F12>", "<ESC><leader>gdwhi") --find defention and set cursor to after it
+keymap("i", "<F12>", "<ESC><leader>gdwhi", def_opts) --find defention and set cursor to after it
 
 
-map("<C-s>", "<ESC>:w<CR>a")
+map("<C-s>", "w")
 map("<C-q>", "wqa")
 map("<C-Q>", "qa!")
 
 
-keymap("n", "<leader>bk", ":!make clean; bear -- make")--make a compile_flags.json through the Makefile
-keymap("n", "<leader>mk", ":!make all") --make
+keymap("n", "<leader>bk", ":!make clean; bear -- make", def_opts)--make a compile_flags.json through the Makefile
+keymap("n", "<leader>mk", ":!make all", def_opts) --make
 
 
-keymap("n", "<leader>cd", "<CMD>lua vim.cmd.cd(\"%:p:h\")") --change directory to current working file
+keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", def_opts) --change directory to current working file
 
 
-keymap("n", "<C-h>", "<CMD>lua Far()") --find and replace
-keymap("n", "<C-f>", "?") --find
+map("<C-h>", "lua Far()") --find and replace
+map("<C-f>", "?") --find
 
 
-keymap("n", "<leader>ga", ":!git add *")--git add <options>(default:"*")
-keymap("n", "<leader>gc", ":!git commit -am \"latest push\"")--git commit -am <options>(default:"gang gang, gang gang, icecream so good, i am a cowboy")
-keymap("n", "<leader>gp", ":!git push -u origin ")--git push <options>(default:"")
+keymap("n", "<leader>ga", ":!git add *", def_opts)--git add <options>(default:"*")
+keymap("n", "<leader>gc", ":!git commit -am \"latest push\"", def_opts)--git commit -am <options>(default:"latest commit")
+keymap("n", "<leader>gp", ":!git push -u origin ", def_opts)--git push <options>(default:"")
 
 
 
@@ -62,10 +62,6 @@ map('<A-0>', '<Cmd>BufferLast<CR>')
 map('<A-p>', '<Cmd>BufferPin<CR>')
 -- Close buffer
 map('<A-c>', '<Cmd>BufferClose<CR>')
-
-
-
-
 
 
 --%s/n/e/g
