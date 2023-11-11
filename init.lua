@@ -1,5 +1,6 @@
 vim.cmd("let g:NERDTreeHijackNetrw=0")
 vim.cmd("let NERDTreeShowHidden=1")
+vim.cmd("set mouse+=a")
 function StartIDE()
 	vim.cmd("nmap <Space>s :lua StopIDE()<CR>")
 	vim.cmd("colorscheme habamax")
