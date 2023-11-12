@@ -3,20 +3,19 @@ vim.cmd("let NERDTreeShowHidden=1")
 vim.cmd("set mouse+=a")
 function StartIDE()
 	vim.cmd("nmap <Space>s :lua StopIDE()<CR>")
-	vim.cmd("colorscheme habamax")
+	vim.cmd("set statusline=%F")
+	vim.wo.relativenumber = true
+	vim.wo.number = true
 
 	require("thesixtendir")
 
-	vim.cmd("let NERDTreeShowHidden=1")
-	vim.wo.relativenumber = true
-	vim.wo.number = true
 	SetTabspace(4)
-	if vim.loop.os_uname().sysname=="Linux" then
+	Randcol()
+	--[[if vim.loop.os_uname().sysname=="Linux" then
 		Cmdick("pywal")
 	else
 		Cmdick("flexoki")
-	end
-	vim.cmd("set statusline+=%F")
+	end]]--
 end
 
 function StopIDE()

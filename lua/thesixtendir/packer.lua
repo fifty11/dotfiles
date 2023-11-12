@@ -38,8 +38,6 @@ return require('packer').startup(function(use)
 	use 'preservim/nerdtree'
 
 	use 'AlphaTechnolog/pywal.nvim'
-	use 'morhetz/gruvbox'
-	use 'folke/tokyonight.nvim'
-	use 'LunarVim/darkplus.nvim'
-	use({ 'stevedylandev/flexoki-nvim', as = 'flexoki' })
+	use 'rebelot/kanagawa.nvim'
+	use 'xiyaowong/transparent.nvim'
   end)

@@ -89,30 +89,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["darkplus.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
-    url = "https://github.com/LunarVim/darkplus.nvim"
-  },
-  flexoki = {
-    loaded = true,
-    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flexoki",
-    url = "https://github.com/stevedylandev/flexoki-nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
-  },
   harpoon = {
     loaded = true,
     path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -179,10 +169,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
+  ["transparent.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
+    path = "C:\\Users\\sixte\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
   }
 }
 
