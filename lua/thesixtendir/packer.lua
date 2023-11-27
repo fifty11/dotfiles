@@ -39,5 +39,5 @@ return require('packer').startup(function(use)
 
 	use 'AlphaTechnolog/pywal.nvim'
 	use 'rebelot/kanagawa.nvim'
-	--use 'xiyaowong/transparent.nvim'
+	use 'xiyaowong/transparent.nvim'
   end)

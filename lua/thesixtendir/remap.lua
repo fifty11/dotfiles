@@ -5,6 +5,10 @@ local function map(str1, str2)
 	keymap("i", str1, "<cmd>" .. str2 .. "<CR>", def_opts)
 end
 
+--keymap("n", "j", "h", def_opts)
+--keymap("n", "k", "j", def_opts)
+--keymap("n", "l", "k", def_opts)
+--keymap("n", ";", "l", def_opts)
 
 vim.g.mapleader = " "
 
@@ -14,23 +18,24 @@ keymap("n", "<leader>he", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>"
 keymap("n", "<leader>ha", ":lua require(\"harpoon.mark\").add_file()<CR>", def_opts) --harpoon menu
 
 
+keymap("v", "<c-c>", "\"+y", def_opts)
 keymap("i", "<F12>", "<ESC><leader>gdwhi", def_opts) --find defention and set cursor to after it
+keymap("n", "<C-l>", "w", def_opts)
+keymap("n", "<C-h>", "b", def_opts)
+
 
 
 map("<C-s>", "w")
-map("<C-q>", "wqa")
-map("<C-Q>", "qa!")
-
-
-keymap("n", "<leader>bk", ":!make clean; bear -- make", def_opts)--make a compile_flags.json through the Makefile
-keymap("n", "<leader>mk", ":!make all", def_opts) --make
+map("<A-s>", "wa")
+map("<C-q>", "qa")
+map("<A-Q>", "qa!")
 
 
 keymap("n", "<leader>cd", ":lua vim.cmd.cd(\"%:p:h\")<CR>", def_opts) --change directory to current working file
 
 
-map("<C-h>", "lua Far()") --find and replace
-map("<C-f>", "?") --find
+keymap("n", "<leader>hh", ":lua Far()<CR>", def_opts) --find and replace
+map("<C-f>", "noh") --find
 
 
 keymap("n", "<leader>ga", ":!git add *", def_opts)--git add <options>(default:"*")
@@ -38,30 +43,33 @@ keymap("n", "<leader>gc", ":!git commit -am \"latest push\"", def_opts)--git com
 keymap("n", "<leader>gp", ":!git push -u origin ", def_opts)--git push <options>(default:"")
 
 
+keymap("n", "<leader>bk", ":!make clean; bear -- make", def_opts)--make a compile_flags.json through the Makefile
+keymap("n", "<leader>mk", ":!make all", def_opts) --make
+
 
 map("<A-t>", ":NERDTreeToggle<CR>:vertical resize 23<CR>")
 
 -- Move to previous/next
-map('<A-,>', '<Cmd>BufferPrevious<CR>')
-map('<A-.>', '<Cmd>BufferNext<CR>')
+map('<A-,>', 'BufferPrevious<CR>')
+map('<A-.>', 'BufferNext<CR>')
 -- Re-order to previous/next
-map('<A-<>', '<Cmd>BufferMovePrevious<CR>')
-map('<A->>', '<Cmd>BufferMoveNext<CR>')
+map('<A-<>', 'BufferMovePrevious')
+map('<A->>', 'BufferMoveNext')
 -- Goto buffer in position...
-map('<A-1>', '<Cmd>BufferGoto 1<CR>')
-map('<A-2>', '<Cmd>BufferGoto 2<CR>')
-map('<A-3>', '<Cmd>BufferGoto 3<CR>')
-map('<A-4>', '<Cmd>BufferGoto 4<CR>')
-map('<A-5>', '<Cmd>BufferGoto 5<CR>')
-map('<A-6>', '<Cmd>BufferGoto 6<CR>')
-map('<A-7>', '<Cmd>BufferGoto 7<CR>')
-map('<A-8>', '<Cmd>BufferGoto 8<CR>')
-map('<A-9>', '<Cmd>BufferGoto 9<CR>')
-map('<A-0>', '<Cmd>BufferLast<CR>')
+map('<A-1>', 'BufferGoto 1')
+map('<A-2>', 'BufferGoto 2')
+map('<A-3>', 'BufferGoto 3')
+map('<A-4>', 'BufferGoto 4')
+map('<A-5>', 'BufferGoto 5')
+map('<A-6>', 'BufferGoto 6')
+map('<A-7>', 'BufferGoto 7')
+map('<A-8>', 'BufferGoto 8')
+map('<A-9>', 'BufferGoto 9')
+map('<A-0>', 'BufferLast')
 -- Pin/unpin buffer
-map('<A-p>', '<Cmd>BufferPin<CR>')
+map('<A-p>', 'BufferPin')
 -- Close buffer
-map('<A-c>', '<Cmd>BufferClose<CR>')
+map('<A-c>', 'BufferClose')
 
 
 --%s/n/e/g

@@ -13,7 +13,6 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 lsp.ensure_installed({
-	'clangd',
 	'lua_ls',
 	'pyre',
 	'cmake',
