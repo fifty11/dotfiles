@@ -10,12 +10,13 @@ clear
 
 #aliasses
 alias neovisualimproved=nvim
+alias vi=nvim
 
 #configurations for builtin
 _comp_options+=(globdots)
 setxkbmap -layout se
 setxkbmap -option 
-HISTFILE=~/.histfile
+HISTFILE=./histfile
 HISTSIZE=5000
 SAVEHIST=5000
 setopt appendhistory
@@ -117,6 +118,8 @@ bindkey  "^[[3;5~"  delete-word
 
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
+bindkey "^H" backward-word
+bindkey "^L" forward-word
 
 bindkey "^L" forward-char
 
