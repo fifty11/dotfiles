@@ -4,11 +4,8 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-echo e
-
 
 # Created by newuser for 5.9
-~/.programs/scripts/walppscript.sh
 clear
 
 #aliasses
@@ -19,8 +16,8 @@ _comp_options+=(globdots)
 setxkbmap -layout se
 setxkbmap -option 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=5000
+SAVEHIST=5000
 setopt appendhistory
 
 ## vi mode
@@ -63,16 +60,18 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' 'lfcd\n'
 
+lfcdwid() lfcd
+zle -N lfcdwid
+bindkey '^o' lfcdwid
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+ [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ source ~/powerlevel10k/powerlevel10k.zsh-theme
+  source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-#startup commands:
+# startup commands:
 
 #plugin sourcing
 #source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -107,14 +106,17 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 
 bindkey -v '^?' backward-delete-char
+bindkey '^H' backward-kill-word
 bindkey -s '	' '^[[B'
 bindkey -s '^[[Z' '^[[D'
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
+bindkey  "^[[3;5~"  delete-word
 
 
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 bindkey "^L" forward-char
+
