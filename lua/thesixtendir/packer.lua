@@ -38,6 +38,6 @@ return require('packer').startup(function(use)
 	use 'preservim/nerdtree'
 
 	use 'AlphaTechnolog/pywal.nvim'
-	use 'rebelot/kanagawa.nvim'
+	use 'ellisonleao/gruvbox.nvim'
 	use 'xiyaowong/transparent.nvim'
   end)

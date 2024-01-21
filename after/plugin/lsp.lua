@@ -15,7 +15,6 @@ vim.api.nvim_create_autocmd('FileType', {
 lsp.ensure_installed({
 	'lua_ls',
 	'pyre',
-	'cmake',
 })
 
 -- Fix Undefined global 'vim'
@@ -32,6 +31,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 })
 
+cmp.setup({
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
+})
+
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
@@ -45,12 +51,18 @@ lsp.set_preferences({
 				error = 'E',
 				warn = 'W',
 				hint = 'H',
-				info = 'I'
+				info = 'i'
 		}
 })
 
+require('mason.settings').set({
+	ui = {
+		border = 'rounded'
+	}
+})
+
 lsp.on_attach(function(client, bufnr)
-	local opts = {buffer = bufnr, remap = false}
+	local opts = {buffer = bufnr, remap = true}
 vim.lsp.buf.code_action()
 	vim.keymap.set("n", "<leader>a", function () vim.lsp.buf.code_action() end, opts)
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -65,9 +77,10 @@ vim.lsp.buf.code_action()
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
-
 vim.diagnostic.config({
 		virtual_text = true
 })
+
+lsp.setup()
+
 require 'lspconfig'.clangd.setup{}
